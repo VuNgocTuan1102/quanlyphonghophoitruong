@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <menuitem id="menu_quan_ly_hop" name="Quản lý Họp"/>
+        <menuitem id="menu_phong_hop" parent="menu_quan_ly_hop" name="Phòng họp" action="phong.hop_action"/>
+        <menuitem id="menu_hoi_dong" parent="menu_quan_ly_hop" name="Hội đồng" action="hoi.dong_action"/>
+        <menuitem id="menu_lich_hop" parent="menu_quan_ly_hop" name="Lịch họp" action="lich.hop_action"/> -->
+        <menuitem
+            id="menu_root"
+            name="Quản lý phòng họp, hội đồng"
+            sequence="0"/>
+        <menuitem name="Quản lý chung"
+            id="menu_quan_ly_chung"
+            parent="menu_root"
+            sequence="1"
+        />
+        <menuitem name="Quản lý phòng họp"
+            id="menu_phong_hop"
+            parent="menu_quan_ly_chung"
+            sequence="2"
+            action="action_phong_hop"
+        />
+        <menuitem name="Quản lý hội đồng"
+            id="menu_hoi_dong"
+            parent="menu_quan_ly_chung"
+            sequence="3"
+            action="action_hoi_dong"
+        />
+        <menuitem name="Đặt phòng"
+            id="menu_dat_phong"
+            parent="menu_quan_ly_chung"
+            sequence="4"
+            action="action_dat_phong"
+        />
+        <menuitem name="Mượn, Trả phòng"
+            id="menu_muon_tra_phong"
+            parent="menu_quan_ly_chung"
+            sequence="5"
+            action="action_muon_tra_phong"
+        />
+        <menuitem name="Lịch sử sử dụng phòng"
+            id="menu_lich_su_su_dung"
+            parent="menu_quan_ly_chung"
+            sequence="6"
+            action="action_lich_su_su_dung"
+        />
+        <menuitem name="Quản lý thiết bị"
+            id="menu_thiet_bi"
+            parent="menu_quan_ly_chung"
+            sequence="7"
+            action="action_thiet_bi"
+        />
+        <menuitem name="Người mượn"
+            id="menu_nguoi_muon"
+            parent="menu_quan_ly_chung"
+            sequence="8"
+            action="action_nguoi_muon"
+        />
+        <!-- <menuitem name="Lịch sử công tác"
+            id="menu_lich_su_cong_tac"
+            parent="menu_root"
+            sequence="4"
+            action="action_lich_su_cong_tac"
+        /> -->
+        <!-- <menuitem name="Danh sách chứng chỉ, bằng cấp"
+            id="menu_danh_sach_chung_chi_bang_cap"
+            parent="menu_root"
+            sequence="4"
+            action="action_danh_sach_chung_chi_bang_cap"
+        /> -->
+    </data>
+</odoo>

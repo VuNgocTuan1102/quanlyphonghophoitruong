@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hoi_dong_form" model="ir.ui.view">
+            <field name="name">hoi_dong</field>
+            <field name="model">hoi_dong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Hội đồng</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ten_hoi_dong"/>
+                            <field name="thanh_vien_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hoi_dong_tree" model="ir.ui.view">
+            <field name="name">hoi_dong</field>
+            <field name="model">hoi_dong</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="ten_hoi_dong"/>
+                      <field name="thanh_vien_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hoi_dong_search">
+            <field name="model">hoi_dong</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="ten_hoi_dong"/>
+                      <field name="thanh_vien_ids"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hoi_dong" model="ir.actions.act_window">
+            <field name="name">Hội đồng</field>
+            <field name="res_model">hoi_dong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "hoi_dong_search"/>
+        </record>
+    </data>
+</odoo>
+

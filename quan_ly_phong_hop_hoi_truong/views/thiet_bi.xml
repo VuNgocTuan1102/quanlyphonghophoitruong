@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record id="view_thiet_bi_form" model="ir.ui.view">
+            <field name="name">thiet_bi_form</field>
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4" string="Quản lý thiết bị">
+                            <field name="ten_thiet_bi"/>
+                            <field name="phong_hop_id"/>
+                            <field name="trang_thai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_thiet_bi_tree" model="ir.ui.view">
+            <field name="name">thiet_bi_tree</field>
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="ten_thiet_bi"/>
+                      <field name="phong_hop_id"/>
+                      <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="thiet_bi_search">
+            <field name="model">thiet_bi</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="ten_thiet_bi"/>
+                      <field name="phong_hop_id"/>
+                      <field name="trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_thiet_bi" model="ir.actions.act_window">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">thiet_bi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="thiet_bi_search"/>
+        </record>
+    </data>
+</odoo>

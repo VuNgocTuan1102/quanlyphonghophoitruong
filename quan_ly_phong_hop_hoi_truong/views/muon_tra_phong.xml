@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record id="view_muon_tra_phong_form" model="ir.ui.view">
+            <field name="name">muon_tra_phong_form</field>
+            <field name="model">muon_tra_phong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4" string="Thông tin mượn, trả phòng">
+                            <field name="phong_hop_id"/>
+                            <field name="nguoi_muon_id"/>
+                            <field name="thoi_gian_muon"/>
+                            <field name="thoi_gian_tra"/>
+                            <field name="trang_thai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_muon_tra_phong_tree" model="ir.ui.view">
+            <field name="name">muon_tra_phong_tree</field>
+            <field name="model">muon_tra_phong</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="phong_hop_id"/>
+                      <field name="nguoi_muon_id"/>
+                      <field name="thoi_gian_muon"/>
+                      <field name="thoi_gian_tra"/>
+                      <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="muon_tra_phong_search">
+            <field name="model">muon_tra_phong</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="phong_hop_id"/>
+                      <field name="nguoi_muon_id"/>
+                      <field name="thoi_gian_muon"/>
+                      <field name="thoi_gian_tra"/>
+                      <field name="trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_muon_tra_phong" model="ir.actions.act_window">
+            <field name="name">Mượn, Trả phòng</field>
+            <field name="res_model">muon_tra_phong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="muon_tra_phong_search"/>
+        </record>
+    </data>
+</odoo>

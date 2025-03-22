@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="view_lich_su_su_dung_form" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_form</field>
+            <field name="model">lich_su_su_dung</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4" string="Lịch sử sử dụng phòng">
+                            <field name="phong_hop_id"/>
+                            <field name="thoi_gian_bat_dau"/>
+                            <field name="thoi_gian_ket_thuc"/>
+                            <field name="nguoi_su_dung_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_lich_su_su_dung_tree" model="ir.ui.view">
+            <field name="name">lich_su_su_dung_tree</field>
+            <field name="model">lich_su_su_dung</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="phong_hop_id"/>
+                      <field name="thoi_gian_bat_dau"/>
+                      <field name="thoi_gian_ket_thuc"/>
+                      <field name="nguoi_su_dung_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lich_su_su_dung_search">
+            <field name="model">lich_su_su_dung</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="phong_hop_id"/>
+                      <field name="thoi_gian_bat_dau"/>
+                      <field name="thoi_gian_ket_thuc"/>
+                      <field name="nguoi_su_dung_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_lich_su_su_dung" model="ir.actions.act_window">
+            <field name="name">Lịch sử sử dụng phòng</field>
+            <field name="res_model">lich_su_su_dung</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="lich_su_su_dung_search"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record id="view_nguoi_muon_form" model="ir.ui.view">
+            <field name="name">nguoi_muon_form</field>
+            <field name="model">nguoi_muon</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4" string="Thông tin người mượn">
+                            <field name="ten_nguoi_muon"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_nguoi_muon_tree" model="ir.ui.view">
+            <field name="name">nguoi_muon_tree</field>
+            <field name="model">nguoi_muon</field>
+            <field name="arch" type="xml">
+                <tree>
+                      <field name="ten_nguoi_muon"/>
+                      <field name="email"/>
+                      <field name="so_dien_thoai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nguoi_muon_search">
+            <field name="model">nguoi_muon</field>
+            <field name="arch" type="xml">
+                <search>
+                      <field name="ten_nguoi_muon"/>
+                      <field name="email"/>
+                      <field name="so_dien_thoai"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_nguoi_muon" model="ir.actions.act_window">
+            <field name="name">Người mượn</field>
+            <field name="res_model">nguoi_muon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="nguoi_muon_search"/>
+        </record>
+    </data>
+</odoo>
